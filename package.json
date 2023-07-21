@@ -1,0 +1,14 @@
+{
+  "name": "v-calendar-chinese",
+  "version": "1.0.0",
+  "description": "v-calendar的中文文档",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vuepress": "^1.9.9"
+  }
+}
