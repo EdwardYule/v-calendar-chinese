@@ -2,48 +2,48 @@
 title: 'Installation'
 ---
 
-:::tip
-[Vue.js](https://vuejs.org) version 2.5+ is required.
+:::提示
+需要[Vue.js](https://vuejs.org) 2.5或以上版本。
 :::
 
 ## NPM
 
-### 1. Install via npm
+### 1. 通过npm安装
 
 ```bash
 npm install v-calendar
 ```
 
-### 2. Import and use VCalendar
-#### *2A. Plugin Method (Recommended)*
+### 2. 导入并使用 VCalendar
+#### *2A. 以插件方式使用 (推荐的使用方法)*
 
-This is the most common use case.
+通过插件方式，将同时引入<v-calendar>和<v-date-picker>两个组件。以下是一个最常见的例子。
 
 ```js
 import Vue from 'vue';
 import VCalendar from 'v-calendar';
 
-// Use v-calendar & v-date-picker components
+// 使用 v-calendar 和 v-date-picker 组件
 Vue.use(VCalendar, {
-  componentPrefix: 'vc',  // Use <vc-calendar /> instead of <v-calendar />
-  ...,                // ...other defaults
+  componentPrefix: 'vc',  // 使用 <vc-calendar /> 来代替 <v-calendar />
+  ...,                // ...其他配置
 });
 
 ```
 
-#### *2B. Components Method*
+#### *2B. 以组件方式使用*
 
-You can also just import components separately.
+如果你不想以插件方式使用，那么你也可以分别引入组件后再注册。
 
 ```js
 import Calendar from 'v-calendar/lib/components/calendar.umd'
 import DatePicker from 'v-calendar/lib/components/date-picker.umd'
 
-// Register components in your 'main.js'
+// 在'main.js'中注册全局组件
 Vue.component('calendar', Calendar)
 Vue.component('date-picker', DatePicker)
 
-// Or just use in separate component
+// 或者就注册在某个Vue组件中
 export default {
   components: {
     Calendar,
