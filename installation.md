@@ -53,7 +53,7 @@ export default {
 }
 ```
 
-If you would still like to provide [plugin defaults](../api/defaults.md), call `setupCalendar` before using any components.
+如果你依然想要使用插件配置项，那么请在使用组件之前调用`setupCalendar`方法。
 
 ```js
 import { setupCalendar} from 'v-calendar'
@@ -72,8 +72,8 @@ setupCalendar({
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
     <meta http-equiv='x-ua-compatible' content='ie=edge'>
-    <!-- IMPORTANT: No CSS link needed as of v1 - It's all inlined -->
-    <!-- Pre v1.0.0 versions need the minified css -->
+    <!-- 重要提醒：v1版本不需要引入任何css文件，已经全部内置了 -->
+    <!-- v1.0.0之前的版本则需要引入css样式 -->
     <!-- <link rel='stylesheet' href='https://unpkg.com/v-calendar/lib/v-calendar.min.css'> -->
   </head>
   <body>
@@ -82,13 +82,13 @@ setupCalendar({
       <v-date-picker v-model='selectedDate' />
     </div>
 
-    <!-- 1. Link Vue Javascript -->
+    <!-- 1. 引入Vue.js -->
     <script src='https://unpkg.com/vue/dist/vue.js'></script>
 
-    <!-- 2. Link VCalendar Javascript (Plugin automatically installed) -->
+    <!-- 2. 引入VCalendar（将会自动以插件方式注册） -->
     <script src='https://unpkg.com/v-calendar'></script>
 
-    <!--3. Create the Vue instance-->
+    <!--3. 创建你的Vue实例 -->
     <script>
       new Vue({
         el: '#app',
